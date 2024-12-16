@@ -1,14 +1,17 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import './index.css';
+import React from 'react';
+import Header from './components/Header';
+import './index.css' // Import the index.css so that tailwind styles can be applied
+
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        {/* Define your routes here */}
-        <Route path="/" element={<><h1>Home Page</h1></>} />
-      </Routes>
-    </Router>
+    <div className="bg-white text-black dark:bg-black dark:text-white">
+      <Header />
+      <div className="mt-20"> {/* Added a margin-top of 20 so that the content does not overlap with the header */}
+        <h1>Hello world</h1>
+      </div>
+
+    </div>
   );
 }
 
